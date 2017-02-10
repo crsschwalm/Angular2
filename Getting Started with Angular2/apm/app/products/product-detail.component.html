@@ -1,11 +1,54 @@
-<div class='panel panel-primary'>
-	<div class='panel-heading'>
-		{{ pageTitle }}
-	</div>
+<div class='panel panel-primary' *ngIf='product'>
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle + ': ' + product.productName}}
+    </div>
 
-	<div class='panel-footer'>
-		<a class='btn btn-default' (click)='onBack()' style='width:80px'>
-			<i class='glyphicon glyphicon-chevron-left'></i>Back
-		</a>
-	</div>
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-sm-8'>
+                <div class='row'>
+                    <div class='col-sm-3'>Name:</div>
+                    <div class='col-sm-9'>{{product.productName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-3'>Code:</div>
+                    <div class='col-sm-9'>{{product.productCode}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-3'>Description:</div>
+                    <div class='col-sm-9'>{{product.description}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-3'>Availability:</div>
+                    <div class='col-sm-9'>{{product.releaseDate}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-3'>Price:</div>
+                    <div class='col-sm-9'>{{product.price|currency:'USD':true}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-sm-3'>5 Star Rating:</div>
+                    <div class='col-sm-9'>
+                        <ai-star [rating]='product.starRating'
+                                (ratingClicked)='onRatingClicked($event)'>
+                        </ai-star>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-sm-8'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='product.imageUrl'
+                     [title]='product.productName'>
+            </div>
+        </div>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
 </div>

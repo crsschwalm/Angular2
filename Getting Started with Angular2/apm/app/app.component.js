@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 //import {library name} from 'module name';
 var core_1 = require("@angular/core");
+var product_service_1 = require("./products/product.service");
 //@importedLibName
 var AppComponent = (function () {
     function AppComponent() {
@@ -20,7 +21,9 @@ AppComponent = __decorate([
         selector: 'pm-app',
         //use templates that will go in (like directive template) file or direct html
         //use back tick `` instead of quote ''
-        template: "\n\t<div>\n\t\t<h1>{{pageTitle}}</h1>\n\t\t<div>My First Component</div>\n\t</div>\n\t"
+        template: "\n\t<div>\n\t\t<nav class='navbar navbar-default'>\n\t\t\t<div class='container-fluid'>\n\t\t\t\t<ul class='nav navbar-nav'>\n\t\t\t\t\t<li><a [routerLink]=\"['/welcome']\">Home</a></li>\n\t\t\t\t\t<li><a [routerLink]=\"['/products']\">Product List</a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</nav>\n\t\t<div class='container'>\n\t\t\t<router-outlet></router-outlet>\n\t\t</div>\n\t</div>\n\t",
+        //makes this service available to any child components
+        providers: [product_service_1.ProductService]
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

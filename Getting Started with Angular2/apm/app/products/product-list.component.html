@@ -1,0 +1,59 @@
+	<div class='panel panel-primary'>
+		<div class='panel-heading'>
+			{{ pageTitle }}
+		</div>
+		<div class='panel-body'>
+			<div class='row' *ngIf='products && products.length'>
+				<div class='col-md-4'>Filter By: 
+					<input type='text' [(ngModel)]='listFilter'/>
+				</div>
+
+			</div>
+
+			<div class='row'>
+				<div class='col-md-6'>
+					<h3 *ngIf='products && products.length && listFilter'>Filtered by: {{ listFilter }}</h3>
+					<br *ngIf='!listFilter'>
+					<!--empty error message -->
+					<h1 *ngIf='!products || !products.length'>Sorry, there are no products at this time</h1>
+				</div>
+			</div>
+
+			<div class='table-responsive'>
+				<table class='table' *ngIf='products && products.length'>
+					<thead>
+						<tr>
+							<th>
+								<button class='btn btn-primary' (click)='toggleImage()'>
+									{{showImage ? 'Hide' : 'Show'}} Image
+								</button>
+							</th>
+							<th>Product</th>
+							<th>Code</th>
+							<th>Available</th>
+							<th>Price</th>
+							<th>5 Star Rating</th>
+						</tr>
+					</thead>
+					<tbody>
+					<!-- best practice compared to AngularJS ng-repeat.
+					let ... of ... itterates through elements in array
+					let ... in ... itterates throught indices of array-->
+						<tr *ngFor='let product of products | productFilter: listFilter'>
+							<td>
+								<img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+							</td>
+							<td>
+								<a [routerLink]="['/product', product.productId]">
+								{{ product.productName }}</a>
+							</td>
+							<td>{{ product.productCode | lowercase}}</td>
+							<td>{{ product.releaseDate }}</td>
+							<td>{{ product.price | currency :'USD' :true:'1.2-2' }}</td>
+							<td><ai-star [rating]='product.starRating' [name]='product.productName' (ratingClicked)='onRatingClicked($event)'></ai-star></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>

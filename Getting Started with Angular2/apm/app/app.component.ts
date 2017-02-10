@@ -1,5 +1,6 @@
 //import {library name} from 'module name';
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductService } from './products/product.service';
 
 //@importedLibName
 @Component({
@@ -9,10 +10,21 @@ import {Component} from '@angular/core';
 	//use back tick `` instead of quote ''
 	template: `
 	<div>
-		<h1>{{pageTitle}}</h1>
-		<div>My First Component</div>
+		<nav class='navbar navbar-default'>
+			<div class='container-fluid'>
+				<ul class='nav navbar-nav'>
+					<li><a [routerLink]="['/welcome']">Home</a></li>
+					<li><a [routerLink]="['/products']">Product List</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class='container'>
+			<router-outlet></router-outlet>
+		</div>
 	</div>
-	`
+	`,
+	//makes this service available to any child components
+	providers: [ ProductService ]
 })
 
 //export to allow for other components to import and reference

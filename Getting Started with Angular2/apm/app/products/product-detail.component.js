@@ -33,7 +33,7 @@ var ProductDetailComponent = (function () {
         this._router.navigate(['/products']);
     };
     ProductDetailComponent.prototype.onRatingClicked = function (message) {
-        this.pageTitle = 'Product Detail: ' + message;
+        this.pageTitle = 'Product Details: ' + message;
     };
     return ProductDetailComponent;
 }());

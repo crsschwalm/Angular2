@@ -39,6 +39,6 @@ export class ProductDetailComponent {
 	}
 
 	onRatingClicked(message: string): void {
-		this.pageTitle = 'Product Detail: ' + message;
+		this.pageTitle = 'Product Details: ' + message;
 	} 
 }

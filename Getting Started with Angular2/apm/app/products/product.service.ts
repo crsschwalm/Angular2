@@ -22,7 +22,7 @@ export class ProductService {
 
 	getProductById(id: number): Observable<IProduct> {
 		return this.getProducts()
-			.map((products: IProducts) => products.find(p => p.productId === id));
+			.map((products: IProduct[]) => products.find(p => p.productId === id));
 	}
 
 	private handleError(error: Response){

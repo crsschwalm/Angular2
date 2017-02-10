@@ -1,6 +1,5 @@
 //import {library name} from 'module name';
 import { Component } from '@angular/core';
-import { ProductService } from './products/product.service';
 
 //@importedLibName
 @Component({
@@ -22,9 +21,7 @@ import { ProductService } from './products/product.service';
 			<router-outlet></router-outlet>
 		</div>
 	</div>
-	`,
-	//makes this service available to any child components
-	providers: [ ProductService ]
+	`
 })
 
 //export to allow for other components to import and reference

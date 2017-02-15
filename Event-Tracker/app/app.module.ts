@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Custom Services
 import { ToastrService } from './common/toastr.service';
 import { AuthService } from './user/auth.service';
+
+//Components
 import {
 	EventsListComponent,
 	EventThumbnailComponent,
@@ -14,10 +16,12 @@ import {
 	EventRouteService,
 	EventListResolver,
 	CreateSessionComponent,
-	SessionListComponent
+	SessionListComponent,
+	DurationPipe
 
 } from './events/index';
 //Custom Components
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { Error404Component } from './errors/404.component';
@@ -40,7 +44,9 @@ import { appRoutes } from './routes';
 		CreateEventComponent,
 		Error404Component,
 		CreateSessionComponent,
-		SessionListComponent
+		SessionListComponent,
+		CollapsibleWellComponent,
+		DurationPipe
 	],
 	providers: [ 
 		EventService,

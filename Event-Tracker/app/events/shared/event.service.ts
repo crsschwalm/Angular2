@@ -20,6 +20,15 @@ export class EventService {
     event.sessions=[];
     EVENTS.push(event);
   }
+
+/**
+ * Set the current event to new properties pushed from create session component
+ * @param {[OBJ]} event [fits model in shared/event.model]
+ */
+  updateEvent(event){
+    let index = EVENTS.findIndex(x => x.id = event.id);
+    EVENTS[index] = event;
+  }
 }
 
 

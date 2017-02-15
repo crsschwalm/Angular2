@@ -12,7 +12,9 @@ import {
 	CreateEventComponent,
 	EventService,
 	EventRouteService,
-	EventListResolver
+	EventListResolver,
+	CreateSessionComponent,
+	SessionListComponent
 
 } from './events/index';
 //Custom Components
@@ -36,7 +38,9 @@ import { appRoutes } from './routes';
 		NavBarComponent,
 		EventDetailsComponent,
 		CreateEventComponent,
-		Error404Component
+		Error404Component,
+		CreateSessionComponent,
+		SessionListComponent
 	],
 	providers: [ 
 		EventService,

@@ -1,22 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
-//Custom Modules
-import { EventService } from './events/shared/event.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//Custom Services
 import { ToastrService } from './common/toastr.service';
+import { AuthService } from './user/auth.service';
+import {
+	EventsListComponent,
+	EventThumbnailComponent,
+	EventDetailsComponent,
+	CreateEventComponent,
+	EventService,
+	EventRouteService,
+	EventListResolver
+
+} from './events/index';
 //Custom Components
 import { EventsAppComponent } from './events-app.component';
-import { EventsListComponent } from './events/events-list.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { Error404Component } from './errors/404.component';
 
 import { appRoutes } from './routes';
 
 @NgModule({
 	imports: [ 
 		BrowserModule,
+		FormsModule,
+		ReactiveFormsModule,
 		RouterModule.forRoot(appRoutes)
 	],
 	declarations: [ 
@@ -24,16 +34,30 @@ import { appRoutes } from './routes';
 		EventsListComponent,
 		EventThumbnailComponent,
 		NavBarComponent,
-		EventDetailsComponent
+		EventDetailsComponent,
+		CreateEventComponent,
+		Error404Component
 	],
 	providers: [ 
 		EventService,
-		ToastrService
+		ToastrService,
+		EventRouteService,
+		EventListResolver,
+		AuthService,
+		{ 
+			provide: 'canDeactivateCreateEvent',
+			useValue: checkDirtyState
+		}
 	],
 	bootstrap: [ EventsAppComponent ]
 
 })
 
-export class AppModule {
+export class AppModule {}
 
+
+function checkDirtyState(component:CreateEventComponent){
+	if(component.isDirty)
+		return window.confirm('You have not saved this event, do you really want to cancel?');
+	return true;
 }

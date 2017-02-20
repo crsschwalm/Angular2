@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Subject, Observable } from 'rxjs/RX';
-import { IEvent } from './event.model';
+import { IEvent, ISession } from './index';
 @Injectable()
 
 export class EventService {
@@ -29,6 +29,37 @@ export class EventService {
     let index = EVENTS.findIndex(x => x.id = event.id);
     EVENTS[index] = event;
   }
+
+  searchSession(searchTerm:string){
+    //set to lowercase for consistency
+    var term = searchTerm.toLocaleLowerCase();
+    //set variable to return
+    var results: ISession[] = [];
+    //loop through the Events Array and for each event
+    EVENTS.forEach(event => {
+    //create a new variable that filters the session array
+      var matchingSessions = event.sessions.filter(session =>
+    //for each session array element look at the session name and see if term is in there by checking if the index is > -1
+        session.name.toLocaleLowerCase().indexOf(term) > -1);
+    //we need to add an attribute (eventId) to the session object
+    //loop throught the matching sessions array, for each element:any, add the property eventId
+      matchingSessions = matchingSessions.map((session:any) => {
+        session.eventId = event.id;
+        return session;
+      })
+    //after retreiving each matching session, add it to the array we return for results
+      results = results.concat(matchingSessions);
+    })
+    //set emitter to return results asyncronously
+    //timeout to simulate HTTP call
+    //emit the session results array
+    var emitter = new EventEmitter(true);
+    setTimeout(() => {
+      emitter.emit(results);
+    }, 100);
+    return emitter;
+  }
+  
 }
 
 

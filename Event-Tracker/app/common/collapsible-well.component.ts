@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
-	selector: 'collapsable-well',
+	selector: 'collapsible-well',
 	template: `
 		<div (click)="toggleContent()" class="well pointable">
 			<h4>

@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 import { Error404Component } from './errors/404.component';
 import {
 	EventListResolver,
-	EventRouteService,
 	CreateEventComponent,
 	EventDetailsComponent,
 	EventsListComponent,
-	CreateSessionComponent
+	CreateSessionComponent,
+	EventResolver
 } from './events/index';
 
 export const appRoutes:Routes = [
@@ -17,7 +17,7 @@ export const appRoutes:Routes = [
 	},
 	{ path: 'events/:id', 
 		component: EventDetailsComponent,
-		canActivate: [ EventRouteService ] },
+		resolve: { event: EventResolver }},
 	{ path: 'events/session/new', component: CreateSessionComponent },
 	{ path: '404', component: Error404Component },
 	{ path: '', redirectTo: '/events', pathMatch: 'full'},

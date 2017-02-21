@@ -10,11 +10,18 @@ import { Router } from '@angular/router';
 	`]
 })
 export class LoginComponent implements OnInit {
+	loginInvalid = false;
+
 	constructor(private auth:AuthService, private router:Router) {}
 
 	login(user){
-		this.auth.loginUser(user.userName, user.password);
-		this.router.navigate(['events']);
+		this.auth.loginUser(user.userName, user.password).subscribe(response => {
+			if(!response){
+				this.loginInvalid = true;
+			} else {
+				this.router.navigate(['events']);
+			}
+		});
 	}
 
 	cancel(){

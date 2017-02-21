@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 //Custom Services
 import { AuthService } from './user/auth.service';
 import { 
@@ -20,7 +21,7 @@ import {
 	EventDetailsComponent,
 	CreateEventComponent,
 	EventService,
-	EventRouteService,
+	EventResolver,
 	EventListResolver,
 	CreateSessionComponent,
 	SessionListComponent,
@@ -45,7 +46,8 @@ declare let jQuery : Object;
 		BrowserModule,
 		FormsModule,
 		ReactiveFormsModule,
-		RouterModule.forRoot(appRoutes)
+		RouterModule.forRoot(appRoutes),
+		HttpModule
 	],
 	declarations: [ 
 		EventsAppComponent, 
@@ -74,7 +76,7 @@ declare let jQuery : Object;
 			provide: TOASTR_TOKEN,
 			useValue: toastr
 		},
-		EventRouteService,
+		EventResolver,
 		EventListResolver,
 		AuthService,
 		VoterService,

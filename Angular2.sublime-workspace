@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"Re",
+				"RequestOptions\talias"
+			],
+			[
+				"status",
+				"statusText\tproperty"
+			],
+			[
+				"direct",
+				"directive\t@Directive (Complex) - Angular2"
+			],
+			[
+				"dire",
+				"directive\t@Directive - Angular2"
+			],
+			[
+				"sor",
+				"sortByVotes\twindow.SessionListComponent"
+			],
+			[
+				"Event",
+				"EventEmitter\talias"
+			],
+			[
 				"ng2",
 				"ng2-component\tAngular 2 Component Snippet"
 			],
@@ -107,6 +131,32 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Event-Tracker/karma.conf.js",
+			"settings":
+			{
+				"buffer_size": 2597,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Event-Tracker/app/events/event-details/voter.service.spec.ts",
+			"settings":
+			{
+				"buffer_size": 896,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Event-Tracker/karma-test-shim.js",
+			"settings":
+			{
+				"buffer_size": 2882,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -151,29 +201,49 @@
 		"/C/Users/cschwalm/Documents/Training/Angular2",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/nav",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user"
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/node_modules/@types",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/node_modules/type-is"
 	],
 	"file_history":
 	[
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/test.spec.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/node_modules/@types/jasmine/index.d.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/test.spec.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/karma-test-shim.js",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/karma-test-shim.js",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/event-details.component.html",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/event-details.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/event.service.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/auth.service.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/profile.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/profile.component.html",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/login.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/session-list.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events-app.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/systemjs.config.js",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/login.component.html",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/voter.service.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/index.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/index.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-resolver.service.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/routes.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/create-event.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/app.module.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/location-validator.directive.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/create-event.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/upvote.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/session-list.component.html",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/event-details.component.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/events-list-resolver.service.ts",
+		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/upvote.component.css",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/create-session.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/modal-trigger.directive.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/simple-modal.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/nav/navbar.component.html",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/index.ts",
 		"/C/Users/cschwalm/Desktop/Allegient-Goals",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/index.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/nav/navbar.component.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/event.service.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/app.module.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/profile.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/jQuery.service.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/collapsible-well.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/events-list.component.ts",
@@ -181,26 +251,15 @@
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-thumbnail.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/index.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/duration.pipe.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/session-list.component.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/event-details.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/event-details/create-session.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/common/collapsable-well.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/events-list.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/restricted-words.validator.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/user.module.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/auth.service.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/routes.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/create-event.component.html",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/create-event.component.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/profile.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/package.json",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/login.component.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/login.component.html",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/index.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/shared/event.model.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/user.routes.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/user/user.model.ts",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events/events-list-resolver.service.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Angular2.sublime-project",
 		"/C/Users/cschwalm/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/errors/404.component.ts",
@@ -212,7 +271,6 @@
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/event-details/event-details.component.html",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/event-details/event-details.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/index.html",
-		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events-app.component.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/main.ts",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/.gitignore",
 		"/C/Users/cschwalm/Documents/Training/Angular2/Event-Tracker/app/events-app.component.js.map",
@@ -249,9 +307,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 104.0,
 		"where_history":
 		[
+			"<project>",
+			"C:\\Users\\cschwalm\\Documents\\Training\\Angular2",
+			"<project>"
 		]
 	},
 	"find_state":
@@ -259,6 +320,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"events/api",
+			"api",
+			"johnpapa",
+			"api",
+			"ngModel",
+			"badge",
 			"[(",
 			"date",
 			"angular-quickstart",
@@ -280,8 +347,374 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Event-Tracker/karma.conf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2348,
+								2348
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2593,
+										2594
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										335,
+										336
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 522.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Event-Tracker/app/events/event-details/voter.service.spec.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								419
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										421,
+										422
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										235,
+										236
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"extensions":
+							[
+								"ts"
+							],
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Event-Tracker/karma-test-shim.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 	constructor(private auth:AuthService, private router:Router) {}
 
 	login(user){
+		//Check with Authentication Service if the username and password are legal
 		this.auth.loginUser(user.userName, user.password).subscribe(response => {
 			if(!response){
 				this.loginInvalid = true;
@@ -29,6 +30,5 @@ export class LoginComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		
 	}
 }

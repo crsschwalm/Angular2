@@ -5,9 +5,10 @@ import { Subject, Observable } from 'rxjs/RX';
 
 @Injectable()
 export class AuthService {
+	currentUser: IUser;
+
 	constructor(private http: Http) {}
 
-	currentUser: IUser;
 	loginUser(username:string, password:string){
 		let headers = new Headers({ 'Content-Type': 'application/json' });
 		let options = new RequestOptions({ headers: headers });
@@ -38,6 +39,8 @@ export class AuthService {
 			if (!!currentUser.userName) {
 				this.currentUser = currentUser;
 			}
+			//self subscribing observable. we dont need to subscribe to this observable. Most times you will want to subscribe when you call
+			//we dont here because we dont need to do anything with the results, also to show that it is possible
 		}).subscribe();
 	}
 
@@ -46,7 +49,6 @@ export class AuthService {
 		let options = new RequestOptions({ headers: headers });
 		this.currentUser.firstName = firstName;
 		this.currentUser.lastName = lastName;
-
 		return this.http.put(`/api/users/${this.currentUser.id}`, JSON.stringify(this.currentUser), options);
 	}
 

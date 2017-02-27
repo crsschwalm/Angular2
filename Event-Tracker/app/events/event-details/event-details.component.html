@@ -1,3 +1,5 @@
+<!--the ? at the end of the object allows the variable to be null. This way we wont get an error-->
+
 <div class="container">
   <img [src]="event?.imageUrl" [alt]="event?.name" class="event-image">
 
@@ -11,14 +13,19 @@
     <div class="col-md-6">
       <div><strong>Date:</strong> {{event?.date | date}}</div>
       <div><strong>Time:</strong> {{event?.time}}</div>
+      <!--Currency pipe https://angular.io/docs/ts/latest/api/common/index/CurrencyPipe-pipe.html-->
       <div><strong>Price:</strong> {{event?.price | currency:'USD':true:'1.2-2'}}</div>
     </div>
     <div class="col-md-6">
-      <address>
+      <address *ngIf="event?.location">
         <strong>Address:</strong><br />
         {{event?.location?.address}}<br />
         {{event?.location?.city}}, {{event?.location?.country}}
       </address>
+      <div *ngIf="event?.onlineUrl">
+        <strong>Online URL: </strong><br />
+        {{event?.onlineUrl}}
+      </div>
     </div>
   </div>
 
@@ -30,11 +37,13 @@
 
     <div class="col-sm-7">
       <div class="btn-group btn-group-sm" style="margin-right: 20px; margin-left: 20px;">
+      <!--set the class active to the button selected. also set the sortby variable-->
         <button class="btn btn-default" [class.active]="sortBy === 'name'" (click)="sortBy = 'name'">By Name</button>
         <button class="btn btn-default" [class.active]="sortBy === 'vote'" (click)="sortBy = 'vote'">By Votes</button>
       </div>
       
       <div class="btn-group btn-group-sm">
+      <!--similar to the sort, but we filter. Note in angular 2 we dont filter with pipes in the view. we do this in the component to seperate logic with view controls-->
         <button class="btn btn-default" [class.active]="filterBy === 'all'" (click)="filterBy = 'all'">All</button>
         <button class="btn btn-default" [class.active]="filterBy === 'beginner'" (click)="filterBy = 'beginner'">Beginner</button>
         <button class="btn btn-default" [class.active]="filterBy === 'intermediate'" (click)="filterBy = 'intermediate'">Intermediate</button>
@@ -46,8 +55,9 @@
       <a (click)="addSession()">Add Session</a>
     </div>
   </div>
-
+<!--Session-List.component, we pass in an eventId if there is an event with an id, pass in a sortBy var, and pass in the sessions-->
   <session-list [eventId]="event?.id" [sortBy]="sortBy" [filterBy]="filterBy" *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
+  <!--CreateSession is visible on click of addSession.. the submit will pass the event to saveNewSession while the cancel will hide and cancel-->
   <create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)" (cancelAddSession1)="cancelAddSession()"></create-session>
 
 </div>

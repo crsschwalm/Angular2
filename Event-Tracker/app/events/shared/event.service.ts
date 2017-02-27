@@ -23,8 +23,18 @@ export class EventService {
   //   setTimeout(() => {subject.next(EVENTS); subject.complete();}, 100)
 	  // return subject;
   //}
-	
 
+
+/*
+*****************The API we are calling to with HTTP is not part of the tutorial****************
+*
+*OBSERVABLES - very important for handling Asynchronous calls
+*Basically, observables are a stream of returning values over time.  similar to promisses, but newer and better
+*Observables must be subscribed to in order to recieve the stream returning.  
+*promises vs observables http://stackoverflow.com/questions/37364973/angular-2-promise-vs-observable
+*
+*/
+//return an observable with will be subscribed to
   getEvent(id: number): Observable<IEvent> {
     return this.http.get("/api/events/" + id).map((response: Response) => {
        return <IEvent>response.json();
@@ -37,7 +47,6 @@ export class EventService {
   saveEvent(event): Observable<IEvent>{
     let headers = new Headers({ 'Content-Type': 'application/json'});
     let options = new RequestOptions({headers: headers});
-
     return this.http.post('api/events', event, options).map((response: Response) => {
       return response.json();
     }).catch(this.handleError);
@@ -49,6 +58,10 @@ export class EventService {
     }).catch(this.handleError);
   }
 
+//Simple Error handling. Probably wont get touched but shows when to be called <in catch()>
+  private handleError( error: Response ){
+    return Observable.throw(error.statusText);
+  }
 
   //USED FOR LOCAL API
   //   //set to lowercase for consistency
@@ -79,9 +92,6 @@ export class EventService {
   //   }, 100);
   //   return emitter;
   // }
-  private handleError( error: Response ){
-    return Observable.throw(error.statusText);
-  }
   
 }
 

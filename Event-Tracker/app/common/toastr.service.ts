@@ -1,13 +1,16 @@
 //Best practice for implementing 3rd party libraries is to make a keyword for Angular to recognize
 //this allows for keyword lookup
+//https://angular.io/docs/ts/latest/api/core/index/OpaqueToken-class.html
 import { OpaqueToken } from '@angular/core';
 
 //pass in string to lookup the dependency injector
 export let TOASTR_TOKEN = new OpaqueToken('toastr');
 
-
-//Wrap 3rd Party Libraries in services to avoid errors and allow for testing
-//This isnt best practice but available if there the API is small enough
+/******This isnt best practice but available if there the API is small enough*****
+*
+*Wrap 3rd Party Libraries in services to avoid errors and allow for testing
+*
+*/
 
 // import { Injectable } from '@angular/core';
 

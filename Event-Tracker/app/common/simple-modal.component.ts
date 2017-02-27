@@ -2,8 +2,11 @@ import { Component, OnInit, Inject, ElementRef, Input, ViewChild} from '@angular
 import { JQ_TOKEN } from './index';
 
 @Component({
-	moduleId: module.id,
+	//Selector decorator will be the unique identifier when referencing the component in the template
 	selector: 'simple-modal',
+	//using {{variable}} notation in the template binds the variable to the class's declared value. see the input variable
+	//the input variable is brought into the class through parent or element attributes see app/navbar.component.html
+	//for elementId, we do this dynamic id so that the modal can be brought in multiple times with different Ids
 	template: `
 	<div id="{{elementId}}" #modalContainer class="modal fade" tabindex="-1">
 		<div class="modal-dialog">
@@ -28,8 +31,7 @@ export class SimpleModalComponent {
 	@Input() closeOnBodyClick: string;
 	@ViewChild('modalContainer') containerEl: ElementRef;
 
-	constructor(@Inject(JQ_TOKEN) private $: any){
-	}
+	constructor(@Inject(JQ_TOKEN) private $: any){}
 
 	closeModal(){
 		if(this.closeOnBodyClick.toLocaleLowerCase() === "true"){

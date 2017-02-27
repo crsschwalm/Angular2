@@ -3,6 +3,7 @@ import { IEvent } from './shared/event.model';
 
 @Component({
 	selector: 'event-thumbnail',
+	//pipes | help to structure the formatting of bound elements.  we have a custom pipe in the shared folder and is referenced in the create-event component
 	template: `
 	<div [routerLink]="['/events', event.id]" class='well hoverwell thumbnail'>
 		<h2>{{ event?.name | uppercase }}</h2>
@@ -33,6 +34,7 @@ import { IEvent } from './shared/event.model';
 	`]
 })
 export class EventThumbnailComponent {
+	//retrieve the input using @Input() inputParameter: type;
 	@Input() event: IEvent;
 
 	getStartTimeClass() {

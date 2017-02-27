@@ -19,7 +19,9 @@ export class SessionListComponent implements OnInit {
 
 	ngOnInit() {		
 	}
-
+//Called When data-bound property changes.  This makes us react to filter and sorting changes
+//ie 	@Input() sessions:ISession[];  @Input() filterBy: string;  @Input() sortBy: string;  @Input() eventId: number;  visibleSessions: ISession[] = [];
+//https://angular.io/docs/ts/latest/api/core/index/OnChanges-class.html
 	ngOnChanges() {
 		if(this.sessions){
 			this.filterSessions(this.filterBy);
@@ -55,7 +57,7 @@ export class SessionListComponent implements OnInit {
 	}
 }
 
-
+//These methods are stateless and have no need to be in the class
 function sortByName(s1: ISession, s2: ISession) {
 	if (s1.name > s2.name) {
 		return 1;

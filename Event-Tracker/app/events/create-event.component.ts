@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from './shared/event.service';
 
-
 @Component({
+	//using this moduleId: module.id decorator allows for relative asset reference
+	//when referencing template url, we dont have to source from the root of the app, rather from the folder we are currently in
 	moduleId: module.id,
 	templateUrl: 'create-event.component.html',
 	styles: [`
@@ -28,6 +29,7 @@ export class CreateEventComponent {
 	}
 
 	saveEvent(formValues){
+		//subscribe to the observable for the eventService's saveEvent function
 		this.eventService.saveEvent(formValues).subscribe( event => {
 			this.isDirty = false;
 			this.router.navigate(['/events']);

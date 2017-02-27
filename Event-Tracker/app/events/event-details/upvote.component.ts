@@ -25,14 +25,11 @@ export class UpvoteComponent implements OnInit {
 	@Input() set voted(val){
 		this.iconColor = val ? 'red' : 'white';
 	}
+	//Passing this variable up to the parent when we call .emit on the eventEmitter
 	@Output() vote = new EventEmitter();
 	iconColor: string;
 
-	constructor() {}
-
-	ngOnInit() {
-		
-	}
+	ngOnInit() {}
 
 	onClick(){
 		//when clicking this event we pass up the chain that there has been a vote. this can be brought in through the parent and can activate a function

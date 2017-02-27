@@ -1,3 +1,12 @@
+/*
+*
+*   Pre-configured, written by Angular team (Allows Karma to work with Angular2)
+*   Used for testing
+*
+ */
+
+
+
 // #docregion
 // /*global jasmine, __karma__, window*/
 Error.stackTraceLimit = 0; // "No stacktrace"" is usually best for app testing.

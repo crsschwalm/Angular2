@@ -5,6 +5,8 @@ import { IEvent } from './shared/event.model';
 
 @Component({
 	moduleId: module.id,
+	//for the list, we set the title and use an *ngFor loop to iterate over each event.  We pass each event to the thumbnail component to build each thumbnail.
+	//pass the event data into the child component by [inputParameter]='memberInTheComponent'
 	template: `
 	<div>
 		<h1>Upcoming Events</h1>

@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit{
   constructor(private auth:AuthService, private router:Router, @Inject(TOASTR_TOKEN) private toastr){}
   
   ngOnInit(){
-    
+    //form control with validation (custom and angular) use FormControl(valueToValidate, [Validation Array])
     this.firstName = new FormControl(this.auth.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-Z].*')]);
     this.lastName = new FormControl(this.auth.currentUser.lastName, Validators.required);
 
@@ -34,6 +34,7 @@ export class ProfileComponent implements OnInit{
     })
   }
 
+//Cleans up what we put in the html. now we have a checker as a function rather than multiple logical operators in the view
   validateLastName(){
     return this.lastName.valid || this.lastName.untouched;
   }
@@ -48,6 +49,7 @@ export class ProfileComponent implements OnInit{
 
   saveProfile(formValues){
     if(this.profileForm.valid)
+      //subscribe to the observable, when returned, toast and reroute
       this.auth.updateCurrentUser(formValues.firstName, formValues.lastName).subscribe(() => {
         this.toastr.success('Profile Saved');
         this.router.navigate(['/events']);
@@ -55,6 +57,7 @@ export class ProfileComponent implements OnInit{
   }
 
   logout(){
+    //subscribe to the observable, when returned, reroute
     this.auth.logout().subscribe(() => {
       this.router.navigate(['/user/login']);
     })

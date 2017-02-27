@@ -1,0 +1,5 @@
+This common folder is used to provide the entire app different modularized features and services.
+
+Here we define 3rd party libraries as services and then set global keyword variables in the appModule to reference these libraries
+
+In common folders, it is BEST PRACTICE to keep features as "black-box" as possible.  Try not to customize components directly for use in one particular instance.  Rather, keep the base logic and customize on an individual basis when calling the component or service.

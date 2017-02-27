@@ -1,6 +1,7 @@
 <h1>New Event</h1>
 <hr>
 <div class="col-md-6">
+<!--newEventForm = template variable, documentation: https://angular.io/docs/ts/latest/api/forms/index/NgForm-directive.html-->
   <form #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
     <div class="form-group" [ngClass]="{'error': newEventForm.controls.name?.invalid && newEventForm.controls.name?.touched}">
       <label for="eventName">Event Name:</label>
@@ -47,7 +48,10 @@
       <label for="imageUrl">Image:</label>
       <em *ngIf="newEventForm.controls.imageUrl?.invalid && newEventForm.controls.imageUrl?.touched && newEventForm.controls.imageUrl?.errors.required">Required</em>
       <em *ngIf="newEventForm.controls.imageUrl?.invalid && newEventForm.controls.imageUrl?.touched  && newEventForm.controls.imageUrl?.errors.pattern">Must be a png or jpg url</em>
+      <!-- Custom pattern requirement -->
       <input [(ngModel)]="imageUrl" name="imageUrl" required pattern=".*\/.*.(png|jpg)" id="imageUrl" type="text" class="form-control" placeholder="url of image..." />
+      <!--2 way binding on the imageUrl input allows the component and view to know the input
+      this img element can then use binding just from the component to capture that url and update the display-->
       <img [src]="newEventForm.controls.imageUrl.value" *ngIf="newEventForm.controls.imageUrl?.valid"/>
     </div>
     

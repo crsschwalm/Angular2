@@ -20,8 +20,8 @@ import { ISession } from '../shared/event.model';
 export class CreateSessionComponent implements OnInit {
 	constructor(private router:Router) {}
 
-	@Output() saveNewSession = new EventEmitter();
-	@Output() cancelAddSession1 = new EventEmitter();
+	@Output() saveNewSession1 = new EventEmitter();
+	@Output() cancelAddSession2 = new EventEmitter();
 
 
 	newSessionForm: FormGroup;
@@ -33,12 +33,17 @@ export class CreateSessionComponent implements OnInit {
 
 
 	ngOnInit() {
+		//FormControl naming must match that in the template
+		//form control with validation (custom and angular) use FormControl(valueToValidate, [Validation Array])
 		this.name = new FormControl('', Validators.required);
 		this.presenter = new FormControl('', Validators.required);
 		this.duration = new FormControl('', Validators.required);
 		this.level = new FormControl('', Validators.required);
+		//Here are some more Angular2 validators https://angular.io/docs/ts/latest/api/forms/index/Validators-class.html
+		//restrictedWords is Custom
 		this.abstract = new FormControl('', [ Validators.required, Validators.maxLength(400), restrictedWords(['foo', 'bar'])]);
 
+		//FormControls belong to a FormGroup
 		this.newSessionForm = new FormGroup({
 			name: this.name,
 			presenter: this.presenter,
@@ -58,11 +63,12 @@ export class CreateSessionComponent implements OnInit {
 			abstract: formValue.abstract,
 			voters: []
 		}
-		this.saveNewSession.emit(session);
+		//emit this up to the parent component.  It is picked up in the event-details.component.html and references the event-details function
+		this.saveNewSession1.emit(session);
 	}
 
 	cancel(){
-		this.cancelAddSession1.emit();
+		this.cancelAddSession2.emit();
 	}
 		
 }

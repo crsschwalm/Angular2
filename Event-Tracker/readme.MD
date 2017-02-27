@@ -16,10 +16,9 @@ npm install
 npm start
 ```
 
-Login
----------------
-johnpapa
-password(not specific)
+(variable) {HTML --> Component} respond to events
+[variable] {Component --> HTML} display component data on the page
+[(variable)] {Component <--> HTML} display and update
 
 
 Additional References:

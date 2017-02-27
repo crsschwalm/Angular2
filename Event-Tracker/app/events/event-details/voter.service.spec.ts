@@ -1,19 +1,33 @@
-
-
+// Unit Testing
 import { VoterService } from './voter.service';
 import { ISession } from '../shared/event.model';
 import { Observable } from 'rxjs/Rx';
 
+/*
+*
+* Jasmine Testing
+* 
+*describe() -- Containing function for the suite of tests
+*beforeEach() -- Common Setup
+*it() -- Creates seperate unit tests
+*expect() -- did it pass?
+*
+* Karma - Runs tests in browser
+* 
+ */
 describe('VoterService', () => {
 	let voterService: VoterService,
 		mockHttp;
 
 	beforeEach(() => {
+		//create instance of mockHttp so it doesnt actually post or delete data
 		mockHttp = jasmine.createSpyObj('mockHttp', ['delete', 'post'])
 		voterService = new VoterService(mockHttp);
 	});
 
+//Test the Delete function
 	describe('deleteVoter', () => {
+		//First Test
 		it('should remove the voter from the list of voters', () => {
 			var session = {
 				id: 6,
@@ -27,12 +41,13 @@ describe('VoterService', () => {
 			expect(session.voters[0]).toBe('john');
 		})
 
-
-		it('should call http.delete with the right URL', ( )=> {
+		//Second Test
+		it('should call http.delete with the right URL', () => {
 			var session = {
 				id: 6,
 				voters: ['john', 'joe'] 
 			};
+			//needs tp return an observable, so we tell the spy to do so
 			mockHttp.delete.and.returnValue(Observable.of(false));
 			voterService.deleteVoter(3, <ISession>session, "joe");
 
@@ -40,9 +55,10 @@ describe('VoterService', () => {
 		})
 	})
 
-
+//Test the Add function
 	describe('addVoter', () => {
-		it('should call http.post with the right URL', ( )=> {
+		//Third function
+		it('should call http.post with the right URL', () => {
 			var session = {
 				id: 6,
 				voters: ['john'] 

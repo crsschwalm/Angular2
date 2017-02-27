@@ -1,12 +1,18 @@
+<!--*****Example of how to use validation in the Component
+        AKA Modle-Driven or Reactive Forms******-->
+
 <div>
   <h1>Edit Your Profile </h1>
   <hr>
   <div class="col-md-4">
+  <!--bind the profileForm FormGroup to the formGroup attribute-->
     <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" novalidate>
+      <!-- Bind to class attribute the class error if the function returns false -->
       <div class="form-group" [ngClass]="{'error' : !validateFirstName() }">
         <label for="firstName">First Name:</label>
         <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</em>
         <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must Start With A Letter</em>
+        <!--formControlName must match the given name in the component-->
         <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
       </div>
       <div class="form-group" [ngClass]="{'error' : !validateLastName() }">

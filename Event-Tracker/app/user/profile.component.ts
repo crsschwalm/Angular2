@@ -4,6 +4,10 @@ import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 import { TOASTR_TOKEN } from '../common/index';
 
+//Example of how to use validation in the Component
+//AKA Modle-Driven or Reactive Forms
+
+
 @Component({
   moduleId: module.id,
   templateUrl: './profile.component.html',
@@ -25,9 +29,12 @@ export class ProfileComponent implements OnInit{
   
   ngOnInit(){
     //form control with validation (custom and angular) use FormControl(valueToValidate, [Validation Array])
+    //Here are some more Angular2 validators
+    //https://angular.io/docs/ts/latest/api/forms/index/Validators-class.html
     this.firstName = new FormControl(this.auth.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-Z].*')]);
     this.lastName = new FormControl(this.auth.currentUser.lastName, Validators.required);
 
+    //add FormControl to a FormGroup
     this.profileForm = new FormGroup({
       firstName: this.firstName,
       lastName: this.lastName

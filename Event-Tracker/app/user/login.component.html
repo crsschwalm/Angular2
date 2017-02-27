@@ -1,18 +1,26 @@
+<!--*******Example of how to use validation in the view*******-->
+
 <h1>Login</h1>
 <hr>
 <div class="col-md-4">
+<!--ngSubmit helps to keep from submiting prematurely. called when the submit button type is activated-->
   <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
     <div class="form-group" >
       <label for="userName">User Name:</label>
       <em *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched || mouseoverLogin)">Required</em>
+      <!--ngModel directive allows us to bind form data
+      Best practice is to only use the binding path you need. ussually ngModel uses 2 way [()] but for our needs we just need to send this to the component
+      https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngModel-->
       <input (ngModel)="userName" name="userName" required id="userName" type="text" class="form-control" placeholder="User Name..." />
     </div>
     <div class="form-group" >
       <label for="password">Password:</label>
       <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched || mouseoverLogin)">Required</em>
+      <!--adding required attributes to the input HTML5 validation-->
       <input (ngModel)="password" name="password" required id="password" type="password" class="form-control"placeholder="Password..." />
     </div>
     <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false">
+    <!--bind to the buttons disabled property. if our invalid field is true, disable-->
       <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
     </span>
     <button (click)="cancel()" type="button" class="btn btn-default">Cancel</button>

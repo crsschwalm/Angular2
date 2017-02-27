@@ -1,5 +1,6 @@
 import { FormControl } from '@angular/forms';
 
+//Custom Validator for the create-session component
 export function restrictedWords(words){
 	return (control:FormControl): {[key: string]:any} => {
 		//if no words to check, return null

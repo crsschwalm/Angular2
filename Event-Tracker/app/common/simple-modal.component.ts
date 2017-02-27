@@ -29,12 +29,17 @@ export class SimpleModalComponent {
 	@Input() title: string;
 	@Input() elementId: string;
 	@Input() closeOnBodyClick: string;
+	//pass in a string that references an Angular2 local ref variable
+	//we'll call it containerElement because it is on the div that contains the modal
+	//This points at the DOM node that is our template above ^^
+	//https://angular.io/docs/ts/latest/api/core/index/ViewChild-decorator.html
 	@ViewChild('modalContainer') containerEl: ElementRef;
 
 	constructor(@Inject(JQ_TOKEN) private $: any){}
 
 	closeModal(){
 		if(this.closeOnBodyClick.toLocaleLowerCase() === "true"){
+			//ViewChild gets us access to the specific DOM node
 			this.$(this.containerEl.nativeElement).modal('hide');
 		}
 	}

@@ -57,7 +57,7 @@
   </div>
 <!--Session-List.component, we pass in an eventId if there is an event with an id, pass in a sortBy var, and pass in the sessions-->
   <session-list [eventId]="event?.id" [sortBy]="sortBy" [filterBy]="filterBy" *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
-  <!--CreateSession is visible on click of addSession.. the submit will pass the event to saveNewSession while the cancel will hide and cancel-->
-  <create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)" (cancelAddSession1)="cancelAddSession()"></create-session>
+  <!--CreateSession.component is a child of event-details. inside the create-session, we can emit events to tell the parent (event-details) to perform an action with parameters. savesession1 and cancelAddSession2 are child methods that call event-details' cancelAddSession and saveNewSession funcitons-->
+  <create-session *ngIf="addMode" (saveNewSession1)="saveNewSession($event)" (cancelAddSession2)="cancelAddSession()"></create-session>
 
 </div>

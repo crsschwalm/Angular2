@@ -32,7 +32,7 @@ export class VoterService {
 	userHasVoted(session: ISession, voterName: string){
 		return session.voters.some(voter =>voter === voterName);
 	}
-
+	//Basic Error handling to show how to catch
 	private handleError( error: Response ){
     	return Observable.throw(error.statusText);
   	}

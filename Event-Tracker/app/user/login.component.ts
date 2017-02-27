@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
 
+//Example of how to use validation in the view
 @Component({
 	moduleId: module.id,
 	templateUrl: 'login.component.html',

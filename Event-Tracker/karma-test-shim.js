@@ -56,7 +56,9 @@ System.config({
 });
 
 System.import('systemjs.config.js')
-  .then(importSystemJsExtras)
+
+//uncomment if you have an extras config file
+  //.then(importSystemJsExtras)
   .then(initTestBed)
   .then(initTesting);
 

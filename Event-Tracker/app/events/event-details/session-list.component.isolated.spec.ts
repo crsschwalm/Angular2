@@ -31,13 +31,11 @@ describe('SessionListComponent', () => {
 		})
 		//Test Sort
 		it('should filter the session correctly', () => {
-			//set the 4 input variables we need
 			component.sessions = <ISession[]>[{name: 'session 2', level: 'intermediate'},
 				{name: 'session 3', level: 'intermediate'},
 				{name: 'session 1', level: 'advanced'}];
 			component.filterBy = 'all';
 			component.sortBy = 'name';
-			//this isnt being used, but we will set it just to be complete
 			component.eventId = 3;
 			//ngOnChanges gets called automatically in the app, but for testing we must call it 
 			component.ngOnChanges();

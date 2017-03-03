@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IUser } from './user.model';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Subject, Observable } from 'rxjs/RX';
+import { Subject, Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class AuthService {
